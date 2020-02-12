@@ -4,11 +4,9 @@ import { BookComponent } from '../app/book/book.component';
 import { AuthorComponent } from '../app/author/author.component';
 import { IssueComponent } from '../app/issue/issue.component';
 import {PagenotfoundComponent} from '../app/pagenotfound/pagenotfound.component'
-import { LoginComponent } from './login/login.component';
 
 
 const routes: Routes = [
-  { path: '', component : LoginComponent},
   {path : 'books' , component : BookComponent},
   {path : 'authors',component : AuthorComponent},
   {path : 'issues',component:IssueComponent},
