@@ -1,0 +1,54 @@
+<p-toast position="top-left"></p-toast>
+<body>
+  <ng4-loading-spinner> </ng4-loading-spinner>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+        <div class="card card-signin">
+          <div class="closeBtnLogin" [routerLink]="['/']"> X </div>
+          <div class="card-body">
+            <div class="logo-container">
+              <img src="assets/img/logo.png" alt="">
+            </div>
+            <h5 class="card-title text-center">Sign In</h5>
+            <form class="form-signin">
+              <form [formGroup]="loginForm">
+                <div class="form-row">
+                  <div class="form-group col-md-12">
+                    <label for="inputEmail4">Email</label>
+                    <input type="email" class="form-control" id="inputEmail4" placeholder="Email"
+                      formControlName='email'>
+                    <div *ngIf="loginForm.controls['email'].dirty && loginForm.controls['email'].invalid">
+                      <p class="form_error" *ngIf="loginForm.controls['email'].hasError('required')">Please
+                        enter email address</p>
+                      <p class="form_error"
+                        *ngIf="loginForm.controls['email'].dirty && loginForm.controls['email'].hasError('pattern')">
+                        Please enter the correct email address.</p>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="inputPassword4">Password</label>
+                  <input type="password" class="form-control" id="inputPassword4" formControlName='password'
+                    placeholder="Password">
+                </div>
+              </form>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <button routerLink="/signup" class="btn btn-lg btn-primary btn-block text-uppercase"
+                    type="submit">Sign
+                    Up</button>
+                </div>
+                <div class="form-group col-md-6">
+                  <button [disabled]="!loginForm.valid" (click)="login()"
+                    class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Login</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

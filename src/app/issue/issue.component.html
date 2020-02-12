@@ -1,0 +1,36 @@
+<div style="text-align:left">
+    <h1>
+      Issued
+    </h1>
+
+    <table>
+      <tr>  
+      <th> Issue Id </th>
+      <th>Book Id</th>
+      <th>Person Id</th>
+      <th>Issue Date</th>
+      <th>Submission Date</th>
+      </tr>
+      <tr *ngFor = "let issue of issues">
+        <td> {{issue.id}} </td>
+        <td> {{issue.book_id}} </td>
+        <td>  {{issue.person_id}}</td>  
+        <td (click)="issueClicked(issue)">  {{issue.issue_date}}</td>
+        <td>  {{issue.submission_date}}</td> 
+      </tr>
+      </table>
+
+      <hr>
+      Book Id <input type="text" [(ngModel)]="selectedIssue.book_id"/><br>
+      Person Id <input type="text" [(ngModel)]="selectedIssue.person_id"/><br>
+      Issue Date <input type="text" [(ngModel)]="selectedIssue.issue_date"/><br>
+      Submission Date <input type="text" [(ngModel)]="selectedIssue.submission_date"/><br>
+
+
+      <button *ngIf="selectedIssue.id != -1" (click)="updateIssue()"> PUT </button>
+      <button *ngIf="selectedIssue.id == -1" (click)="createIssue()"> POST </button>
+      <button *ngIf="selectedIssue.id != -1" (click)="deleteIssue()"> DELETE </button>
+    
+
+  
+ </div>
