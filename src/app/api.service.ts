@@ -23,6 +23,11 @@ export class ApiService {
   getAllIssues() : Observable<any>{
         return this.http.get(this.baseurl + 'issue/',
         {headers : this.httpHeaders})}
+  
+  getAllUsers():Observable<any>{
+    return this.http.get(this.baseurl + 'user/',
+    {headers : this.httpHeaders})}
+  
 
   getOneAuthor(id): Observable<any> {
           return this.http.get(this.baseurl + 'author/' + id + '/',

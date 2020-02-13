@@ -1,3 +1,12 @@
+<app-navbar></app-navbar>
+<h1>{{title}}</h1>
+ <nav class="button">
+   <a routerLink = '/books' routerLinkActive = "active"> Books </a>
+   <a routerLink = '/authors' routerLinkActive = "active"> Authors </a>
+   <a routerLink = '/issues' routerLinkActive = "active"> Issues </a>
+   <a routerLink = '/users' routerLinkActive = "active"> Users </a>
+
+  </nav>
 <div style="text-align:left">
     <h1>
       Authors
@@ -25,7 +34,7 @@
 
 
 <hr>
-<div>
+<div class="myform">
 <label>Author First Name :- </label><input type="text" [(ngModel)]="selectedAuthor.first_name"/><br>
 <label>Author Last Name :-  </label><input type="text" [(ngModel)]="selectedAuthor.last_name"/><br>
 <label>Book Id :- </label> <input type="text" [(ngModel)]="selectedAuthor.book"/><br> 

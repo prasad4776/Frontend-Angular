@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../api.service';
+import { Issues } from '../issues';
 
 @Component({
   selector: 'app-issue',
@@ -7,7 +8,8 @@ import { ApiService } from '../api.service';
   styleUrls: ['./issue.component.css']
 })
 export class IssueComponent {
-  issues = [{book_id : 1,person_id:3,issue_date:'2020-09-09',submission_date:'2020-09-04'}]
+  issues : Issues[];
+  // = [{book_id : 1,person_id:3,issue_date:'2020-09-09',submission_date:'2020-09-04'}]
   selectedIssue;
 
 

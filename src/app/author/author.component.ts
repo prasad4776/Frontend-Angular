@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ApiService} from '../api.service'
+import { Author } from '../author';
 
 @Component({
   selector: 'app-author',
@@ -8,7 +9,8 @@ import {ApiService} from '../api.service'
 })
 export class AuthorComponent {
 
-  authors = [{first_name : 'abc',last_name:'abcc,',book:[1,1,1]}]
+  authors : Author[];
+  //= [{first_name : 'abc',last_name:'abcc,',book:[1,1,1]}]
   selectedAuthor;
   
 
