@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {ApiService} from '../api.service'
-import { Author } from '../author';
+import { Author } from 'src/app/author';
+import { ApiService } from 'src/app/services/api.service';
 
 @Component({
   selector: 'app-author',

@@ -1,29 +1,37 @@
 /* You can add global styles to this file, and also import other style files */
-.active{
-    color:cadetblue;
+
+* {
+    margin: 0;
+    padding: 0;
 }
-body{
-font-size: 14px;
-color: #000;
-background-color:  beige;
+
+* {
+    box-sizing: border-box;
 }
+
+.active {
+    color: cadetblue;
+}
+
+body {
+    font-size: 14px;
+    color: #000;
+    background-color: beige;
+}
+
 .button a {
-background-color: #5ad1ff80;
-margin: 7px;
-padding: 5px 20px;
-border-radius: 4px;
-font-size: 14px;
-color:
-#000;
-border: solid 1px
-    #9b9b9b61;
+    background-color: #7f8a8f80;
+    margin: 7px;
+    padding: 5px 20px;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #000;
+    border: solid 1px #9b9b9b61;
 }
 
 .topnav {
     float: right;
     margin-right: 10px;
-
-
 }
 
 .topnav button {
@@ -38,5 +46,17 @@ border: solid 1px
 .myform label {
     width: 100px;
     font-size: 16px;
+    margin-left: 5.8in;
 }
 
+table {
+    margin-left: 5.8in;
+}
+
+h1 {
+    text-align: center;
+}
+
+.bmargin {
+    margin-left: 5.8in;
+}
