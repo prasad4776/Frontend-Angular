@@ -18,6 +18,9 @@ export class AppComponent {
       if (event instanceof NavigationStart) {
         if (event['url'] == '/login') {
           this.showHead = false;
+        }
+        else if (event['url'] == '/') {
+          this.showHead = false;
         } else {
           // console.log("NU")
           this.showHead = true;
